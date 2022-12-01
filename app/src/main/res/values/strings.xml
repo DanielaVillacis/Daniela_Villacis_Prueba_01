@@ -4,4 +4,9 @@
     <string name="textview_apellido">Apellidos: </string>
     <string name="textview_dividendo">Dividendo</string>
     <string name="textview_divisor">Divisor</string>
+    <string name="textview_parteentera">Divisor</string>
+    <string name="textview_residuo">Divisor</string>
+    <string name="textview_divisor">Divisor</string>
+    <string name="textview_divisor">Divisor</string>
+
 </resources>
