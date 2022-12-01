@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -26,12 +26,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
         android:layout_marginTop="68dp"
-        android:text="TextView"
+        android:text="@string/textview_apellido"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName12"
+        android:id="@+id/editTextNumInvertido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/editTextResiduo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
         android:layout_marginTop="192dp"
-        android:text="TextView"
+        android:text="@string/textview_divisor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,12 +73,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
         android:layout_marginTop="316dp"
-        android:text="TextView"
+        android:text="@string/textview_residuo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName10"
+        android:id="@+id/editTextParteEntera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName9"
+        android:id="@+id/editTextDivisor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -107,9 +107,9 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="388dp"
-        android:text="TextView"
+        android:text="@string/textview_numinvertido"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -119,12 +119,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
         android:layout_marginTop="256dp"
-        android:text="TextView"
+        android:text="@string/textview_parteentera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName24"
+        android:id="@+id/editTextDividendo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -142,7 +142,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
         android:layout_marginTop="16dp"
-        android:text="hola"
+        android:text="@string/textview_nombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -152,12 +152,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
         android:layout_marginTop="140dp"
-        android:text="TextView"
+        android:text="@string/textview_dividendo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -170,22 +170,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSiguiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginTop="476dp"
-        android:text="Button"
+        android:text="@string/button_siguiente"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonMostrarResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginTop="536dp"
-        android:text="Button"
+        android:text="@string/button_mostrarresultado"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
