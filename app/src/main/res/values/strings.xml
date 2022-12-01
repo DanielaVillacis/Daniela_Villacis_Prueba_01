@@ -9,5 +9,6 @@
     <string name="textview_numinvertido">Num. Invertido</string>
     <string name="button_siguiente">Siguiente</string>
     <string name="button_mostrarresultado">Mostrar Resultado</string>
+    <string name="button_cerrar">Cerrar</string>
 
 </resources>

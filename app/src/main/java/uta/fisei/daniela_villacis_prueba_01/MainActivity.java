@@ -34,4 +34,12 @@ public class MainActivity extends AppCompatActivity {
         );
 
     }
+
+
+
+    public int metodoParteEntera(int dividendo, int divisor){
+
+        return  0;
+    }
+
 }

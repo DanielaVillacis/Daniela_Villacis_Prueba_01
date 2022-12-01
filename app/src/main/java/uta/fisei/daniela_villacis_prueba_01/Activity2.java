@@ -10,8 +10,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
 
 public class Activity2 extends AppCompatActivity {
+
+    private EditText nombre;
+    private EditText apellido;
+    private Button button;
 
     ActivityResultLauncher<Intent> activityResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -29,6 +38,22 @@ public class Activity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
+
+        button = findViewById(R.id.buttonSiguiente);
+        nombre = findViewById(R.id.editTextName);
+        apellido = findViewById(R.id.editTextApellido);
+
+        button.setOnClickListener(new View.OnClickListener(){
+           @Override
+            public void onClick(View view) {
+             Intent intent = new Intent(Activity2.this, Activity3.class);
+
+              startActivity(intent);
+
+              }
+          }
+        );
+
     }
 
 
