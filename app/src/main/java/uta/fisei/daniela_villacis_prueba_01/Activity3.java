@@ -23,7 +23,7 @@ public class Activity3 extends AppCompatActivity {
     private EditText divisor;
     private EditText numero;
 
-    private Button button;
+    private Button buttonC;
 
 /*    ActivityResultLauncher<Intent> activityResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -51,7 +51,7 @@ public class Activity3 extends AppCompatActivity {
         nombre = findViewById(R.id.editTextName);
         apellido = findViewById(R.id.editTextApellido);
 
-        button = findViewById(R.id.buttonCerrar);
+        buttonC = findViewById(R.id.buttonCerrar);
 
         Bundle extras = getIntent().getExtras();
 
@@ -63,7 +63,7 @@ public class Activity3 extends AppCompatActivity {
 
 
 
-        button.setOnClickListener(new View.OnClickListener(){
+        buttonC.setOnClickListener(new View.OnClickListener(){
            @Override
             public void onClick(View view) {
                String divr = divisor.getText().toString();

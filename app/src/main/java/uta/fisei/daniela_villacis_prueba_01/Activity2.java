@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -34,6 +35,7 @@ public class Activity2 extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     if(result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
+                        buttonC.setEnabled(true);
                         String[] resultado = data.getDataString().split("_");
                         dividendo.setText(resultado[0]);
                         divisor.setText(resultado[1]);
@@ -56,23 +58,37 @@ public class Activity2 extends AppCompatActivity {
         buttonS = findViewById(R.id.buttonSiguiente);
         buttonC = findViewById(R.id.buttonCerrar);
 
-        String name = nombre.getText().toString();
-        String ape = apellido.getText().toString();
+
 
         buttonS.setOnClickListener(new View.OnClickListener(){
            @Override
             public void onClick(View view) {
+               String name = nombre.getText().toString();
+               String ape = apellido.getText().toString();
              Intent intent = new Intent(Activity2.this, Activity3.class);
              intent.putExtra("nameExtra", name);
              intent.putExtra("apeExtra", ape);
 
-             activityResult.launch(intent);
+             //activityResult.launch(intent);
 
-             //startActivity(intent);
+             startActivity(intent);
 
               }
           }
         );
+
+        buttonC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String send = nombre.getText().toString() + ""+ apellido.getText().toString() + "" + dividendo.getText().toString() + "" + divisor.getText().toString() + "" + numero.getText().toString();
+
+                Intent intent = new Intent();
+                intent.setData(Uri.parse(send));
+                setResult(Activity.RESULT_OK, intent);
+
+                finish();
+            }
+        });
 
     }
 

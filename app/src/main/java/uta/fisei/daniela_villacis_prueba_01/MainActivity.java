@@ -52,4 +52,8 @@ public class MainActivity extends AppCompatActivity {
         return  res;
     }
 
+    public int num_invertido(int num){
+        return 0;
+    }
+
 }
