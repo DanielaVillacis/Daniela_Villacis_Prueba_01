@@ -37,9 +37,19 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public int metodoParteEntera(int dividendo, int divisor){
+    public int[] metodoParteEntera(int dividendo, int divisor){
 
-        return  0;
+
+        int cos = 0;
+
+        while (dividendo>0) {
+            cos++;
+            dividendo = dividendo- divisor;
+        }
+
+      int[] res = {cos, dividendo};
+
+        return  res;
     }
 
 }

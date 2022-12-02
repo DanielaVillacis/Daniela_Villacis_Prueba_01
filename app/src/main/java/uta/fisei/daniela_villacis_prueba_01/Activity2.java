@@ -34,7 +34,6 @@ public class Activity2 extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     if(result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
-                        //cerrar.setEnabled(true);
                         String[] resultado = data.getDataString().split("_");
                         dividendo.setText(resultado[0]);
                         divisor.setText(resultado[1]);
@@ -52,8 +51,8 @@ public class Activity2 extends AppCompatActivity {
         buttonS = findViewById(R.id.buttonSiguiente);
         nombre = findViewById(R.id.editTextName);
         apellido = findViewById(R.id.editTextApellido);
-        divisor = findViewById(R.id.editTextDivisor;
-        numero = findViewById(R.id.editTextNumInvertido;
+        divisor = findViewById(R.id.editTextDivisor);
+        numero = findViewById(R.id.editTextNumInvertido);
         buttonS = findViewById(R.id.buttonSiguiente);
         buttonC = findViewById(R.id.buttonCerrar);
 
@@ -67,9 +66,9 @@ public class Activity2 extends AppCompatActivity {
              intent.putExtra("nameExtra", name);
              intent.putExtra("apeExtra", ape);
 
-               //activityResult.launch(Intent);
+             activityResult.launch(intent);
 
-             startActivity(intent);
+             //startActivity(intent);
 
               }
           }
@@ -78,10 +77,10 @@ public class Activity2 extends AppCompatActivity {
     }
 
 
-    @Override
+  /*  @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
 
-    }
+    }*/
 }

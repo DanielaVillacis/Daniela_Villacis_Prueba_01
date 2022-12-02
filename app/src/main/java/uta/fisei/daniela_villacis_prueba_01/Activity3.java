@@ -58,8 +58,6 @@ public class Activity3 extends AppCompatActivity {
         String nombres = extras.getString("nameExtra");
         String apellidos = extras.getString("apeExtra");
 
-
-
         nombre.setText(nombres);
         apellido.setText(apellidos);
 
@@ -84,13 +82,13 @@ public class Activity3 extends AppCompatActivity {
 
     }
 
-    @Override
+  /*  @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         //apellido.setText(data.getDataString());
 
-    }
+    }*/
 
 
 }
