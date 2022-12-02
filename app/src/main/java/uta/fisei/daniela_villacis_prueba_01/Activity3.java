@@ -1,25 +1,66 @@
 package uta.fisei.daniela_villacis_prueba_01;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class Activity3 extends AppCompatActivity {
 
+    private EditText nombre;
+    private EditText apellido;
+    private EditText dividendo;
+    private EditText divisor;
+    private EditText numero;
+
     private Button button;
+
+    ActivityResultLauncher<Intent> activityResult = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if(result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        //
+                        apellido.setText(data.getDataString());
+                    }
+                }
+            });
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
 
-        button = findViewById(R.id.buttonCerrar);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                finish();
+        dividendo = findViewById(R.id.editTextDividendo);
+        divisor = findViewById(R.id.editTextDivisor);
+        numero = findViewById(R.id.editTextNumInvertido);
+        nombre = findViewById(R.id.editTextName);
+        apellido = findViewById(R.id.editTextApellido);
 
-            });
+        button = findViewById(R.id.buttonCerrar);
+
+
+        button.setOnClickListener(new View.OnClickListener(){
+           @Override
+            public void onClick(View view) {
+
+            finish();
+           }
+        });
+
+
     }
 }

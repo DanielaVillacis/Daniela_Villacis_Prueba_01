@@ -29,6 +29,8 @@ public class Activity2 extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     if(result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
+                        //
+                        //textViewTitle.setText(data.getDataString());
                     }
                 }
             });
@@ -43,10 +45,15 @@ public class Activity2 extends AppCompatActivity {
         nombre = findViewById(R.id.editTextName);
         apellido = findViewById(R.id.editTextApellido);
 
+        String name = nombre.getText().toString();
+        String ape = apellido.getText().toString();
+
         button.setOnClickListener(new View.OnClickListener(){
            @Override
             public void onClick(View view) {
              Intent intent = new Intent(Activity2.this, Activity3.class);
+             intent.putExtra("nameExtra", name);
+             intent.putExtra("nameExtra", ape);
 
               startActivity(intent);
 
