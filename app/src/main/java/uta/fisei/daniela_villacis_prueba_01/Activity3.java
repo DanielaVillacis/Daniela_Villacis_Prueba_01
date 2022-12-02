@@ -4,6 +4,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -29,9 +30,8 @@ public class Activity3 extends AppCompatActivity {
                 @Override
                 public void onActivityResult(ActivityResult result) {
                     if(result.getResultCode() == Activity.RESULT_OK) {
-                        Intent data = result.getData();
-                        //
-                        apellido.setText(data.getDataString());
+
+
                     }
                 }
             });
@@ -52,6 +52,11 @@ public class Activity3 extends AppCompatActivity {
 
         button = findViewById(R.id.buttonCerrar);
 
+        Intent intent = getIntent();
+        String name = intent.getStringExtra(Activity2.apeExtra);
+        apellido.setText(name);
+
+
 
         button.setOnClickListener(new View.OnClickListener(){
            @Override
@@ -63,4 +68,14 @@ public class Activity3 extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        //apellido.setText(data.getDataString());
+
+    }
+
+
 }

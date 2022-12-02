@@ -21,6 +21,7 @@ public class Activity2 extends AppCompatActivity {
     private EditText nombre;
     private EditText apellido;
     private Button button;
+    public final static String EXTRA_APE = "uta.fisei.daniela_villacis_prueba_01.NOMBRE";
 
     ActivityResultLauncher<Intent> activityResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -53,7 +54,7 @@ public class Activity2 extends AppCompatActivity {
             public void onClick(View view) {
              Intent intent = new Intent(Activity2.this, Activity3.class);
              intent.putExtra("nameExtra", name);
-             intent.putExtra("nameExtra", ape);
+             intent.putExtra("apeExtra", ape);
 
               startActivity(intent);
 
